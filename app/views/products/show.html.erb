@@ -1,0 +1,12 @@
+<h1> <%=@product.name%> </h1>
+
+<ul> 
+    <li> nome: <%=@product.name%> </li> <!-- @ variavel que compartilha entre o controller e a view.-->
+    <li> preço: <%=@product.price%> </li>
+    <li> quantidade: <%=@product.quantity%> </li>
+</ul>
+
+<%= link_to "Voltar para o inicio", products_path %> 
+<%= link_to "Editar produto", edit_product_path(@product.id) %>
+<%= link_to "Deletar produto", product_path(@product.id), data: { turbo_method: :delete } %>
+

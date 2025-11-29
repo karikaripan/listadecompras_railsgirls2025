@@ -2,6 +2,7 @@
 
 <ul> 
 <% @products.each do |product| %>
-    <li> <%=product.name%> </li>
+    <li> <%= link_to product.name, product_path(product.id)%> </li>
 <% end %>
 </ul>
+<%= link_to "Clique aqui para Cadastrar", new_product_path%> 
